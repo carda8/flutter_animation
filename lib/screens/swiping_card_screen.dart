@@ -160,37 +160,30 @@ class _SwipingCardScreenState extends State<SwipingCardScreen>
                         child: Material(
                           elevation: 10,
                           shape: const CircleBorder(),
-                          child: Container(
-                            width: 70,
-                            height: 70,
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            child: Stack(
-                              alignment: Alignment.center,
-                              children: [
-                                Transform.scale(
-                                  scale: scaleButtonBackground,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      color: _position.value < 0
-                                          ? colorCloseBackground
-                                          : Colors.white,
-                                      shape: BoxShape.circle,
-                                    ),
-                                    width: 70,
-                                    height: 70,
+                          child: Stack(
+                            alignment: Alignment.center,
+                            children: [
+                              Transform.scale(
+                                scale: scaleButtonBackground,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: _position.value < 0
+                                        ? colorCloseBackground
+                                        : Colors.white,
+                                    shape: BoxShape.circle,
                                   ),
+                                  width: 70,
+                                  height: 70,
                                 ),
-                                Icon(
-                                  Icons.close_rounded,
-                                  size: 50,
-                                  color: _position.value < 0
-                                      ? Colors.white
-                                      : Colors.red,
-                                ),
-                              ],
-                            ),
+                              ),
+                              Icon(
+                                Icons.close_rounded,
+                                size: 50,
+                                color: _position.value < 0
+                                    ? Colors.white
+                                    : Colors.red,
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -206,6 +199,7 @@ class _SwipingCardScreenState extends State<SwipingCardScreen>
                           elevation: 10,
                           shape: const CircleBorder(),
                           child: Stack(
+                            alignment: Alignment.center,
                             children: [
                               Transform.scale(
                                 scale: scaleButtonBackground,
@@ -220,17 +214,11 @@ class _SwipingCardScreenState extends State<SwipingCardScreen>
                                   height: 70,
                                 ),
                               ),
-                              Container(
-                                padding: const EdgeInsets.all(10.0),
-                                decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Icon(Icons.check_rounded,
-                                    size: 50,
-                                    color: _position.value > 0
-                                        ? Colors.white
-                                        : Colors.green),
-                              ),
+                              Icon(Icons.check_rounded,
+                                  size: 50,
+                                  color: _position.value > 0
+                                      ? Colors.white
+                                      : Colors.green),
                             ],
                           ),
                         ),

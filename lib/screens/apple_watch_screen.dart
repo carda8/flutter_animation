@@ -76,7 +76,7 @@ class _AppleWatchScreenState extends State<AppleWatchScreen>
       ),
       body: Center(
         child: AnimatedBuilder(
-          animation: progressList[0],
+          animation: _animationController,
           // Listenable.merge(progressList),
           builder: (context, child) => Column(
             mainAxisAlignment: MainAxisAlignment.center,
